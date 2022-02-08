@@ -70,10 +70,11 @@ func (p PrimeNumbers) Prime(i PrimeNumber) (PrimeNumber, error) {
 
 // Next return the next prime
 func (p PrimeNumber) Next() (PrimeNumber, error) {
-	if len(next) < int(p) {
+	next, ok := next[p]
+	if !ok {
 		return 0, ErrOutOfRange
 	}
-	return next[p], nil
+	return next, nil
 }
 
 // First return the first prime

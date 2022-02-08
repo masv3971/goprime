@@ -1,4 +1,4 @@
-module goprime
+module github.com/masv3971/goprime
 
 go 1.17
 
